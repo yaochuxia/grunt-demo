@@ -5,7 +5,9 @@
 加载一个文件消耗的时间可以忽略不计，问题是你显示一个复杂的网页可能会加载N多文件，那我们在我们可以控制的范围内，能少花点时间就少花点呗。用户可是对网页加载的速度很挑剔的！
 对JS，一般就会将本地的所有用到的文件合并及压缩。当然，以上对使用requireJS一类的框架加载的除外。
 
-## clean:删除临时文件
+## grunt是如何工作的
+
+clean:删除临时文件
 
 uglify:压缩
 
@@ -37,18 +39,15 @@ task:concat
 package.json:该文件用来为npm存放项目配置的元数据，与grunt关系最大的配置在devDependencies中。
 
 {  
-    "name": "cyjs",  
+    "name": "test",  
     "version": "0.1.0",  
-    "description": "js for k68.org",  
-    "homepage": "http://www.k68.org/",  
-    "author": "firebaby",  
+    "description": "JSLite is a minimalist JavaScript library for modern browsers with a largely jQuery-compatible API. If you use jQuery, you already know how to use JSLite.",  
+    "author": "yaochuxiagithub <675993729@qq.com>",  
     "devDependencies": {  
       "grunt": "~0.4.1",  
-      "grunt-contrib-jshint": "~0.3.0",  
       "grunt-contrib-concat": "~0.1.1",  
       "grunt-contrib-uglify": "~0.1.2",  
-      "grunt-contrib-cssmin": "~0.5.0",  
-      "grunt-htmlhint": "~0.9.2"  
+      "grunt-contrib-cssmin": "~0.5.0",
     }  
 }
 Gruntfile.js:注意G的大写，这个文件就是grunt的配置了，其中详细定义了每个任务的细节和执行任务的顺序等。
